@@ -1,3 +1,6 @@
+# Create project with app.module.ts
+ng new my-app --no-standalone --routing --ssr=false
+
 # Desafio7Dias
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
