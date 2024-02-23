@@ -1,0 +1,54 @@
+  
+main {
+    padding: 20px;
+}
+  
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+nav {
+    background-color: #343a40; /* Cor de fundo da barra de navegação */
+    padding: 10px 20px; /* Espaçamento interno */
+  }
+  
+  nav a {
+    color: #ffffff; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    margin-right: 15px; /* Espaçamento à direita de cada link */
+    font-size: 18px; /* Tamanho da fonte */
+  }
+  
+  nav a:hover {
+    color: #cccccc; /* Cor do texto ao passar o mouse */
+  }
+  
+  nav a.active {
+    color: #ffdd00; /* Cor do texto para o link ativo */
+    font-weight: bold; /* Deixa o texto em negrito */
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center; /* Centraliza os links na barra de navegação */
+    align-items: center; /* Alinha os itens verticalmente */
+  }
+  
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column; /* Empilha os links verticalmente em telas pequenas */
+    }
+  
+    nav a {
+      margin-bottom: 10px; /* Adiciona espaçamento inferior entre os links */
+      text-align: center; /* Centraliza o texto dos links */
+    }
+  }
+  
+  
