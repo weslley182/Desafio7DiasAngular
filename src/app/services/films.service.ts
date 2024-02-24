@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { Films } from '../models/Films.model';
+import { ReturnAPI } from '../models/ReturnAPI.model';
+import { Film } from '../models/Film.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,10 +16,10 @@ export class FilmsService {
 
   constructor(private http: HttpClient) { }
 
-  getFilms(): Observable<Films> {
+  getFilms(): Observable<ReturnAPI<Film>> {
     const cachedData = localStorage.getItem(this.cacheKey);
     const cacheTime = localStorage.getItem(`${this.cacheKey}_time`);
-    let minutes = 5; // 5 minutos de cache
+    let minutes = 5/6; // 5 minutos de cache
     let expireMinutes = minutes * 60 * 1000; 
   
     const isCacheValid = cacheTime && (Date.now() - parseInt(cacheTime, 10) < expireMinutes);
@@ -27,7 +28,7 @@ export class FilmsService {
       return of(JSON.parse(cachedData));
     } 
     else {
-      return this.http.get<Films>(this.apiUrl).pipe(
+      return this.http.get<ReturnAPI<Film>>(this.apiUrl).pipe(
         tap(data => {
           localStorage.setItem(this.cacheKey, JSON.stringify(data));
           localStorage.setItem(`${this.cacheKey}_time`, Date.now().toString());

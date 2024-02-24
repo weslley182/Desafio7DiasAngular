@@ -17,8 +17,8 @@ export class FilmesComponent implements OnInit{
   isLoading = true;
 
   ngOnInit() {
-    this.filmsService.getFilms().subscribe(data => {
-      this.dataSource = data.results;
+    this.filmsService.getFilms().subscribe(apiReturn  => {
+      this.dataSource = apiReturn.results;
       this.isLoading = false;
     });
   }
