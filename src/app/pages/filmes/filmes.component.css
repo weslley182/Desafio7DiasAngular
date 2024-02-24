@@ -11,10 +11,22 @@
   
   
   h2 {
-    color: #1976d2; /* Cor azul para o título, ajuste conforme o tema do seu app */
-    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-family: 'Star Jedi', Arial, sans-serif; /* Use uma fonte temática se disponível */
+    color: #ffe81f; /* Cor amarela característica de Star Wars */
+    margin-bottom: 20px;
     text-align: center;
+    font-size: 2.5em; /* Tamanho maior para destaque */
+    text-shadow: 1px 1px 3px #000; /* Sombra para dar profundidade */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+    text-transform: uppercase; /* Tudo em maiúsculas para mais impacto */
+    padding: 10px; /* Espaçamento interno */
+    border-top: 2px solid #ffe81f; /* Borda superior para destaque */
+    border-bottom: 2px solid #ffe81f; /* Borda inferior para destaque */
+    display: inline-block; /* Permite o alinhamento das bordas ao texto */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo levemente transparente */
+    margin-top: 40px; /* Aumenta o espaço acima do título */
   }
+  
 
   .progress {
     display: flex;

@@ -1,0 +1,50 @@
+/* home.component.css */
+.homepage {
+    text-align: center;
+  }
+  
+  .home-header h1 {
+    color: #ffe81f; /* Cor amarela característica de Star Wars */
+  }
+  
+  .intro {
+    margin: 20px 0;
+  }
+  
+  .film-list h2 {
+    margin-top: 40px;
+  }
+  
+  .film-item {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ffe81f; /* Borda amarela */
+    border-radius: 5px;
+  }
+  
+  .film-item h3 {
+    color: #ffe81f;
+  }
+  
+  .film-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #343a40;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .film-item a:hover {
+    background-color: #ffe81f;
+    color: #343a40;
+  }
+
+/* home.component.css */
+.home-header img {
+    max-width: 80vw; /* Limita a largura a 80% da largura da viewport */
+    max-height: 60vh; /* Limita a altura a 50% da altura da viewport */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 20px auto; /* Adiciona espaço em volta e centraliza horizontalmente */
+  }   
