@@ -15,4 +15,18 @@
     margin-bottom: 20px; /* Espaço abaixo do título */
     text-align: center;
   }
+
+  .progress {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da viewport */
+    width: 100vw; /* Largura total da viewport */
+    position: fixed; /* Fixa na viewport para garantir que fique sempre visível */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que o spinner fique acima de outros elementos */
+  }
+  
+  
   

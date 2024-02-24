@@ -14,9 +14,13 @@ export class FilmesComponent implements OnInit{
 
   constructor(private filmsService: FilmsService) { }
 
+  isLoading = true;
+
   ngOnInit() {
     this.filmsService.getFilms().subscribe(data => {
       this.dataSource = data.results;
+      this.isLoading = false;
     });
   }
+
 }
