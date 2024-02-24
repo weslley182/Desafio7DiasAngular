@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+import { MatTableModule } from '@angular/material/table';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FilmesComponent } from './pages/filmes/filmes.component';
@@ -26,8 +28,10 @@ const appRoutes: Routes = [
     BaseLayoutComponent
   ],
   imports: [
+    MatTableModule,
+    HttpClientModule,
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes)    
   ],
   providers: [],
   bootstrap: [AppComponent]
