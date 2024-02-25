@@ -24,7 +24,7 @@ export class FilmsService {
 
     const cachedData = localStorage.getItem(this.cacheKey);
     const cacheTime = localStorage.getItem(`${this.cacheKey}_time`);
-    let minutes = 0; // 5 minutos de cache
+    let minutes = 0; // minutos de cache
     let expireMinutes = minutes * 60 * 1000; 
   
     const isCacheValid = cacheTime && (Date.now() - parseInt(cacheTime, 10) < expireMinutes);
