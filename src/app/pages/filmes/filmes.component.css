@@ -7,6 +7,7 @@
     
     margin-left: auto;
     margin-right: auto;
+    max-width: 95%;
   }
   
   
@@ -40,5 +41,47 @@
     z-index: 1000; /* Garante que o spinner fique acima de outros elementos */
   }
   
-  
+  /* Exemplo de estilização */
+button mat-icon-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+  border: 2px solid #000; /* Borda preta para o formulário */
+  border-radius: 20px; /* Bordas arredondadas */
+  overflow: hidden; /* Garante que nada saia fora da borda arredondada */
+}
+
+.search-container input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none; /* Remove a borda do input */
+  outline: none; /* Remove o contorno ao focar */
+  border-radius: 20px; /* Bordas arredondadas */
+}
+
+.search-container button {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  outline: none; /* Remove o contorno ao focar */
+}
+
+.search-container mat-icon {
+  font-size: 24px; /* Tamanho do ícone */
+}
+
+
   

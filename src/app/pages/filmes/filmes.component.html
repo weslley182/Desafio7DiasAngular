@@ -4,6 +4,14 @@
 <ng-template #tableContent>
   <div class="table-container">
     <h2>Filmes</h2>
+    <div class="search-container">
+      <form (submit)="searchFilms()">
+        <input type="text" [(ngModel)]="searchTerm" name="search" placeholder="Buscar titulo de filmes...">
+        <button mat-icon-button type="submit">
+          <mat-icon>search</mat-icon>
+        </button>
+      </form>      
+    </div>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <!-- Colunas da Tabela -->
       <ng-container matColumnDef="title">
