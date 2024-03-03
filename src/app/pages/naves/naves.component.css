@@ -1,0 +1,14 @@
+.details{
+    padding: 2rem;
+    margin: 2rem auto;
+  }
+  
+
+  .progress {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da viewport */
+    width: 100vw; /* Largura total da viewport */
+    position: fixed; /* Fixa na viewport para garantir que fique sempre visível */
+  }

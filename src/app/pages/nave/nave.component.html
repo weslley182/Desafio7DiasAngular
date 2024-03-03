@@ -1,10 +1,55 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <title>Nave</title>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    Aqui vai o código HTML que fará seu site aparecer. NAVE
-  </body>
-</html>
+<!-- nave.component.html -->
+<h2>Naves</h2>
+<div class="search-container">
+  <form (submit)="searchStarships()">
+    <mat-form-field appearance="fill">
+      <mat-label>Buscar naves</mat-label>
+      <input matInput type="text" [(ngModel)]="searchTerm" name="search" placeholder="Buscar naves...">
+      <button mat-icon-button matSuffix type="submit">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </form>      
+</div>
+
+<div class="progress" *ngIf="isLoading; else tableContent">
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+</div>
+<ng-template #tableContent>
+  <div class="table-container">    
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!-- Coluna de Nome -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let starship"> {{ starship.name }} </td>
+      </ng-container>
+
+      <!-- Coluna de Modelo -->
+      <ng-container matColumnDef="model">
+        <th mat-header-cell *matHeaderCellDef> Modelo </th>
+        <td mat-cell *matCellDef="let starship"> {{ starship.model }} </td>
+      </ng-container>
+
+      <!-- Coluna de Classe -->
+      <ng-container matColumnDef="starship_class">
+        <th mat-header-cell *matHeaderCellDef> Classe </th>
+        <td mat-cell *matCellDef="let starship"> {{ starship.starship_class }} </td>
+      </ng-container>
+
+      <!-- Coluna de Fabricante -->
+      <ng-container matColumnDef="manufacturer">
+        <th mat-header-cell *matHeaderCellDef> Fabricante </th>
+        <td mat-cell *matCellDef="let starship"> {{ starship.manufacturer }} </td>
+      </ng-container>
+
+      <!-- Cabeçalho da Tabela -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <!-- Linhas da Tabela -->
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    <mat-paginator [pageSize]="10" [pageSizeOptions]="[10]" [length]="totalDeNaves" (page)="loadPage()"></mat-paginator>
+
+  </div>
+</ng-template>

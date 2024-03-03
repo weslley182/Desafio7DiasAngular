@@ -1,0 +1,57 @@
+/* nave.component.css */
+h2 {
+  font-family: 'Star Jedi', Arial, sans-serif;
+  color: #ffe81f;
+  text-align: center;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 3px #000;
+  margin: 20px 0;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-container form {
+  width: 100%;
+}
+
+.input-container {
+  position: relative;
+}
+
+mat-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.table-container {
+  overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+  margin: 20px;
+}
+
+mat-table {
+  width: 100%;
+}
+
+/* Estilos adicionais para o spinner */
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px; /* Altura mínima para o spinner */
+}
+
+/* Estilos para corrigir a sobreposição com o rodapé */
+.container {
+  padding-bottom: 100px; /* Espaço no fundo para evitar sobreposição com o rodapé */
+}
